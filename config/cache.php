@@ -3,7 +3,9 @@ return [
     'driver' => 'file',
     'file' => [
         'path' => __DIR__ . '/../storage/cashe',
-        'prefix' => 'cashe_'
+        'prefix' => 'cache_'
     ],
-    
+    'memory' => [
+        'prefix' => 'cache_'
+    ],
 ];
