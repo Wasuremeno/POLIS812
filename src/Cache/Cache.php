@@ -32,4 +32,13 @@ abstract class Cache implements CacheInterface{
         }
         return time() + $ttl;
     }
+
+    //без декларации абстракных методов ничего не работает в FileCache
+
+    //я поменял свое мнение, не стоит мне использовать тут абстрактные методы, я и так уже весь день сижу с xDebug
+    // abstract public function set(string $key, $value, ?int $ttl = null): bool;
+    // abstract public function get(string $key, $default = null);
+    // abstract public function has(string $key): bool;
+    // abstract public function delete(string $key): bool;
+    // abstract public function clear(): bool;
 }

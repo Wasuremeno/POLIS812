@@ -58,7 +58,7 @@ class FileCache extends Cache{
         return $this->path . $hashedKey . $this->extension;
     }
     //получает значения из кэша
-    public function get(string $key, $default = null){
+    public function get(string $key, $default = null): mixed{
         $key = $this->buildKey($key);
 
         if (!$this->has($key)) {
